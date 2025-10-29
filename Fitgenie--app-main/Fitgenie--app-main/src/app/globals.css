@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Light Theme based on FitGenie proposal */
+    --background: 15 56% 93%; /* #F8E9E4 Light Desaturated Orange */
+    --foreground: 15 25% 25%; /* Dark, slightly desaturated for contrast */
+
+    --muted: 15 40% 85%;
+    --muted-foreground: 15 25% 35%;
+
+    --popover: 15 56% 93%;
+    --popover-foreground: 15 25% 25%;
+
+    --card: 15 50% 96%; /* Slightly lighter/different than background for card effect */
+    --card-foreground: 15 25% 25%;
+
+    --border: 15 30% 80%;
+    --input: 15 30% 88%;
+
+    --primary: 14 78% 61%; /* #E97451 Strong Orange */
+    --primary-foreground: 14 70% 97%; /* Very light for contrast on primary */
+
+    --secondary: 0 75% 80%; /* #F2A7A7 Lighter, Brighter Pink (Used as secondary) */
+    --secondary-foreground: 0 60% 30%; /* Darker pink/red for contrast */
+
+    --accent: 0 75% 80%; /* #F2A7A7 Lighter, Brighter Pink */
+    --accent-foreground: 0 60% 30%; /* Darker pink/red for contrast */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 14 78% 61%; /* Primary color for rings */
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors */
+    --sidebar-background: 15 60% 90%; /* Slightly different shade of light orange */
+    --sidebar-foreground: 15 25% 20%; /* Darker for sidebar text */
+    --sidebar-primary: 14 78% 55%; /* Darker shade of primary for active items */
+    --sidebar-primary-foreground: 14 70% 97%;
+    --sidebar-accent: 14 78% 65%; /* Lighter shade of primary for hover */
+    --sidebar-accent-foreground: 14 70% 97%;
+    --sidebar-border: 15 30% 75%;
+    --sidebar-ring: 14 78% 61%;
+
+    --chart-1: 14 78% 61%; /* Primary */
+    --chart-2: 0 75% 70%; /* Lighter Pink */
+    --chart-3: 25 70% 65%; /* Another shade of orange/yellow */
+    --chart-4: 35 70% 70%;
+    --chart-5: 15 30% 60%;
+  }
+
+  .dark {
+    /* Dark Theme - Retaining original dark theme structure, but with FitGenie accent colors */
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+
+    --primary: 14 78% 61%; /* #E97451 Strong Orange */
+    --primary-foreground: 14 70% 97%;
+
+    --secondary: 0 75% 70%; /* Lighter version of pink for dark mode */
+    --secondary-foreground: 0 60% 90%;
+
+    --accent: 0 75% 70%; /* Lighter version of pink for dark mode */
+    --accent-foreground: 0 60% 90%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --ring: 14 78% 61%;
+
+    /* Dark Sidebar specific colors */
+    --sidebar-background: 20 14.3% 6%;
+    --sidebar-foreground: 60 9.1% 90%;
+    --sidebar-primary: 14 78% 55%;
+    --sidebar-primary-foreground: 14 70% 97%;
+    --sidebar-accent: 14 78% 65%;
+    --sidebar-accent-foreground: 14 70% 97%;
+    --sidebar-border: 12 6.5% 20%;
+    --sidebar-ring: 14 78% 61%;
+
+    --chart-1: 14 78% 61%;
+    --chart-2: 0 75% 70%;
+    --chart-3: 25 70% 65%;
+    --chart-4: 35 70% 70%;
+    --chart-5: 15 30% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

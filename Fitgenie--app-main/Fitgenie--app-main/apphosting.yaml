@@ -1,0 +1,19 @@
+# Settings to manage and configure a Firebase App Hosting backend.
+# https://firebase.google.com/docs/app-hosting/configure
+
+# Defines the arguments that will be passed to your build and run commands.
+buildConfig:
+  args:
+    - --build-env=GOOGLE_API_KEY=$GOOGLE_API_KEY
+
+runConfig:
+  # Increase this value if you'd like to automatically spin up
+  # more instances in response to increased traffic.
+  maxInstances: 1
+  # Make the GOOGLE_API_KEY available to the app at runtime
+  # The value will be provided during the deploy command.
+  availability:
+  - SECRET
+
+environment:
+  GOOGLE_API_KEY: ${secret:GOOGLE_API_KEY}
